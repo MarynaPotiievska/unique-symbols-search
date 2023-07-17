@@ -1,24 +1,26 @@
 const refs = {
   form: document.querySelector("form"),
-  resultRow: document.querySelector("p"),
+  resultRow: document.querySelector("span"),
 };
 
-const findUniqueSymbol = (word) => {	
-	const uniqueSymbols = [...word].filter(symbol => word.indexOf(symbol) === word.lastIndexOf(symbol));	
-	return uniqueSymbols[0];
+const findUniqueSymbol = (word) => {
+  const uniqueSymbols = [...word].filter(
+    (symbol) => word.indexOf(symbol) === word.lastIndexOf(symbol)
+  );
+  return uniqueSymbols[0];
 };
 
 const textAnalysis = (text) => {
-	const symbols = text.split(" ").map((word) => {		
+  const symbols = text.split(" ").map((word) => {
     if (word.includes("\n")) {
-		const words = word.split("\n").map((word) => {			
+      const words = word.split("\n").map((word) => {
         return findUniqueSymbol(word);
       });
-	} else {		
+    } else {
       return findUniqueSymbol(word);
     }
-	});	
-	return findUniqueSymbol(symbols.join(","));
+  });
+  return findUniqueSymbol(symbols.join(","));
 };
 
 const handleSubmit = (e) => {

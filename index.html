@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Become A Developer</title>
-  </head>
-  <body>
-    <main>
-      <form>
-		<h2>Try it</h2>
-		<textarea type="text" placeholder="Paste your text"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <div>
-        <h2>Your result:</h2>
-		<p></p>
-      </div>
-    </main>
 
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Become A Developer</title>
+</head>
+
+<body>
+  <main>
+    <section class="welcome">
+      <div class="container">
+        <h1 class="welcome-title">Welcome!</h1>
+        <p class="welcome-text">
+          Let us introduce the program to search unique symbols.
+          How it works? You put your text to the form and press "Submit"
+          button. Our program finds the first unique symbol in every word and
+          then finds the first unique symbol among symbols which
+          were finded before.
+        </p>
+      </div>
+    </section>
+    <section class="text">
+      <div class="container">
+        <h2 class="title">Try it</h2>
+        <form>
+          <textarea type="text" placeholder="Input your text" required class="input"></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+    <section class="result">
+      <div class="container">
+        <h2 class="title">Your result:</h2>
+        <span class="result-symbol"></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
