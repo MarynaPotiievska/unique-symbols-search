@@ -84,7 +84,7 @@ p {
 
 .result .container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 16px;
 }
 
